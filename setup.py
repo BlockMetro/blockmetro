@@ -1,8 +1,8 @@
-from disutils import setup
+from setuptools import setup, find_packages
 
 setup(
     name = 'blockmetro',
-    packages = ['blockmetro'],
+    packages = find_packages(),
     version = '1.0',
     lisence = 'MIT',
     description = 'Python bindings for the BlockMetro API',
@@ -11,8 +11,8 @@ setup(
     url = 'https://github.com/BlockMetro/blockmetro-python',
     download_url = 'https://github.com/BlockMetro/blockmetro-python',
     keywords = ['cardano', 'api'],
-    python_requires=">=3.6",
-    classifiers=[
+    python_requires = ">=3.6",
+    classifiers = [
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Licence :: OSI Approved :: MIT Licence',
