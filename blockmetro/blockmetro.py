@@ -61,8 +61,8 @@ class Address():
         data = {'address': address}
         return get_request(api_key, 'addresses', data)
 
-    def list(api_key: str, used='all', page=0):
-        data = {'used': used, 'page': page}
+    def list(api_key: str, state='all', page=0):
+        data = {'state': state, 'page': page}
         return get_request(api_key, 'addresses/list', data)
 
 class StakePool():
@@ -181,8 +181,8 @@ class BlockMetro():
             data = {'address': address}
             return get_request(self.api_key, 'addresses', data)
 
-        def new_list(api_key: str, used='all', page=0):
-            data = {'used': used, 'page': page}
+        def new_list(api_key: str, state='all', page=0):
+            data = {'state': state, 'page': page}
             return get_request(self.api_key, 'addresses/list', data)
 
         address.retrieve = types.MethodType(new_retrieve, address)
