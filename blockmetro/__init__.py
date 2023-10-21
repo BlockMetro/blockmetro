@@ -1,1 +1,1 @@
-import blockmetro
+from blockmetro import blockmetro
