@@ -1,2 +1,2 @@
 # BlockMetro Python Module
-### More coming soon...
+[Read Docs](https://blockmetro.io/docs)
