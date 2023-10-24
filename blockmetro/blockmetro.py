@@ -70,14 +70,14 @@ class StakePool():
         self.api_key = api_key
 
     def retrieve(api_key: str):
-        return get_request(api_key, 'stake-pools')
+        return get_request(api_key, 'stake-pool')
 
     def join(api_key: str, stake_pool_id: str):
         data = {'stake_pool_id': stake_pool_id}
-        return put_request(api_key, 'stake-pools', data)
+        return put_request(api_key, 'stake-pool', data)
 
     def leave(api_key: str):
-        return delete_request(api_key, 'stake-pools')
+        return delete_request(api_key, 'stake-pool')
 
 class Policy():
     def __init__(self, api_key=''):
@@ -193,14 +193,14 @@ class BlockMetro():
         stake_pool = StakePool(api_key)
 
         def new_retrieve(self):
-            return get_request(self.api_key, 'stake-pools')
+            return get_request(self.api_key, 'stake-pool')
 
         def new_join(self, stake_pool_id: str):
             data = {'stake_pool_id': stake_pool_id}
-            return put_request(self.api_key, 'stake-pools', data)
+            return put_request(self.api_key, 'stake-pool', data)
 
         def new_leave(self):
-            return delete_request(self.api_key, 'stake-pools')
+            return delete_request(self.api_key, 'stake-pool')
 
         stake_pool.retrieve = types.MethodType(new_retrieve, stake_pool)
         stake_pool.join = types.MethodType(new_join, stake_pool)
